@@ -3,9 +3,9 @@ package org.solutis.abstracts;
 import org.solutis.interfaces.AnimalIF;
 
 public abstract class AnimalAB implements AnimalIF {
-    private int quantComida;
-    private int distancia;
-    private int tempoDormido;
+    protected int quantComida;
+    protected int distancia;
+    protected int tempoDormido;
 
     public AnimalAB() {
         this.quantComida = 0;
@@ -13,9 +13,10 @@ public abstract class AnimalAB implements AnimalIF {
         this.tempoDormido = 0;
     }
 
+    @Override
     public abstract void comer(int quantComida);
-
+    @Override
     public abstract void mover(int distancia);
-
+    @Override
     public abstract void dormir(int tempoDormido);
 }
