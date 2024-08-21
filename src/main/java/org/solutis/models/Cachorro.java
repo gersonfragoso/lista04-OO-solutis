@@ -13,12 +13,12 @@ public class Cachorro extends AnimalAB {
     @Override
     public void mover(int distancia) {
         this.distancia += distancia;
-        System.out.println("O cachorro comeu " + distancia + " unidade de comida");
+        System.out.println("O cachorro andou " + distancia + " metros");
     }
 
     @Override
     public void dormir(int tempoDormido) {
         this.tempoDormido += tempoDormido;
-        System.out.println("O cachorro comeu " + tempoDormido + " unidade de comida");
+        System.out.println("O cachorro dormiu " + tempoDormido + " horas");
     }
 }
