@@ -4,6 +4,7 @@ import org.solutis.Enums.TipoAnimal;
 import org.solutis.interfaces.AnimalIF;
 
 public abstract class AnimalAB implements AnimalIF {
+    protected String especie;
     protected String nome;
     protected TipoAnimal tipoAnimal;
     protected int idade;
@@ -17,7 +18,8 @@ public abstract class AnimalAB implements AnimalIF {
     protected int distancia;
     protected  int tempoDormido;
 
-    public AnimalAB(String nome, TipoAnimal tipoAnimal, int idade, String habitat, double altura, double peso) {
+    public AnimalAB(String especie,String nome, TipoAnimal tipoAnimal, int idade, String habitat, double altura, double peso) {
+        this.especie = especie;
         this.nome = nome;
         this.tipoAnimal = tipoAnimal;
         this.idade = idade;

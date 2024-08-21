@@ -5,8 +5,8 @@ import org.solutis.abstracts.AnimalAB;
 import org.solutis.abstracts.AnimalTerrestreAB;
 
 public class Gato extends AnimalTerrestreAB {
-    public Gato(String nome, TipoAnimal tipoAnimal, int idade, String habitat, int quantidadePatas, double altura, double peso) {
-        super(nome, tipoAnimal, idade, habitat, quantidadePatas, altura, peso);
+    public Gato(String especie,String nome, TipoAnimal tipoAnimal, int idade, String habitat, int quantidadePatas, double altura, double peso) {
+        super(especie,nome, tipoAnimal, idade, habitat, quantidadePatas, altura, peso);
     }
 
     @Override

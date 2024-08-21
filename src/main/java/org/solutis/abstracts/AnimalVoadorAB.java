@@ -3,8 +3,8 @@ package org.solutis.abstracts;
 import org.solutis.Enums.TipoAnimal;
 
 public abstract class AnimalVoadorAB extends AnimalAB{
-    public AnimalVoadorAB(String nome, TipoAnimal tipoAnimal, int idade, String habitat, int quantAsas, int envergaduraAsa, double altura, double peso) {
-        super(nome, tipoAnimal, idade, habitat, altura, peso);
+    public AnimalVoadorAB(String especie,String nome, TipoAnimal tipoAnimal, int idade, String habitat, int quantAsas, int envergaduraAsa, double altura, double peso) {
+        super(especie,nome, tipoAnimal, idade, habitat, altura, peso);
         this.quantAsas = quantAsas;
         this.envergaduraAsa = envergaduraAsa;
     }
