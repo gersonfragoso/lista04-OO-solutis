@@ -1,18 +1,25 @@
 package org.solutis.models;
 
+import org.solutis.Enums.TipoAnimal;
 import org.solutis.abstracts.AnimalMarinhoAB;
 
 
 public class Peixe extends AnimalMarinhoAB {
+    public Peixe(String nome, TipoAnimal tipoAnimal, int idade, String habitat, double altura, double peso) {
+        super(nome, tipoAnimal, idade, habitat, altura, peso);
+    }
+
     @Override
     public void comer(int quantidade) {
-        this.quantidadeDeComida += quantidade;
+        this.quantComida += quantidade;
         System.out.println("O peixe comeu " + quantidade + " unidades de comida.");
     }
 
     @Override
     public void mover(int distancia) {
-        nadar(distancia);
+        this.distancia += distancia;
+        System.out.println("O peixe nadou " + distancia + " metros.");
+
     }
 
     @Override
@@ -23,7 +30,6 @@ public class Peixe extends AnimalMarinhoAB {
 
     @Override
     public void nadar(int distancia) {
-        this.distancia += distancia;
-        System.out.println("O peixe nadou " + distancia + " metros.");
+        mover(distancia);
     }
 }
