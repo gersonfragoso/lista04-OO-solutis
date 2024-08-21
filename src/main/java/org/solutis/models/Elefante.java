@@ -1,8 +1,19 @@
 package org.solutis.models;
 
+import org.solutis.Enums.TipoAnimal;
 import org.solutis.abstracts.AnimalAB;
+import org.solutis.abstracts.AnimalTerrestreAB;
 
-public class Elefante extends AnimalAB {
+public class Elefante extends AnimalTerrestreAB {
+    public Elefante(String nome, TipoAnimal tipoAnimal, int idade, String habitat, int quantidadePatas, double altura, double peso) {
+        super(nome, tipoAnimal, idade, habitat, quantidadePatas, altura, peso);
+    }
+
+    @Override
+    public void caminhar(int distancia) {
+        mover(distancia);
+    }
+
     @Override
     public void comer(int quantComida) {
         this.quantComida += quantComida;

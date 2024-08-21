@@ -1,8 +1,15 @@
 package org.solutis.models;
 
+import org.solutis.Enums.TipoAnimal;
 import org.solutis.abstracts.AnimalAB;
+import org.solutis.abstracts.AnimalTerrestreAB;
 
-public class Cachorro extends AnimalAB {
+public class Cachorro extends AnimalTerrestreAB {
+    public Cachorro(String nome, TipoAnimal tipoAnimal, int idade, String habitat, int quantPatas, double altura, double peso) {
+        super(nome, tipoAnimal, idade, habitat, quantPatas, altura, peso);
+        this.quantPatas = quantPatas;
+    }
+
     @Override
     public void comer(int quantComida) {
         this.quantComida += quantComida;
@@ -20,5 +27,10 @@ public class Cachorro extends AnimalAB {
     public void dormir(int tempoDormido) {
         this.tempoDormido += tempoDormido;
         System.out.println("O cachorro dormiu " + tempoDormido + " horas");
+    }
+
+    @Override
+    public void caminhar(int distancia) {
+        mover(distancia);
     }
 }
