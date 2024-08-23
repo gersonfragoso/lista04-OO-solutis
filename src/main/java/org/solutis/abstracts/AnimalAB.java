@@ -16,9 +16,9 @@ public abstract class AnimalAB implements AnimalIF {
     protected double peso;
     protected int quantComida;
     protected int distancia;
-    protected  int tempoDormido;
+    protected int tempoDormido;
 
-    public AnimalAB(String especie,String nome, TipoAnimal tipoAnimal, int idade, String habitat, double altura, double peso) {
+    public AnimalAB(String especie, String nome, TipoAnimal tipoAnimal, int idade, String habitat, double altura, double peso) {
         this.especie = especie;
         this.nome = nome;
         this.tipoAnimal = tipoAnimal;
@@ -33,8 +33,10 @@ public abstract class AnimalAB implements AnimalIF {
 
     @Override
     public abstract void comer(int quantComida);
+
     @Override
     public abstract void mover(int distancia);
+
     @Override
     public abstract void dormir(int tempoDormido);
 }
